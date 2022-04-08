@@ -52,8 +52,11 @@
             <?php for($_j = 0; $_j < count($partite); $_j++) { ?>
                 <li>
                     <span><?= $partite[$_j]['team_casa']['squadra'] ?></span>
-                    <span><?= $partite[$_j]['team_casa']['punteggio'] ?></span>
+                    -
                     <span><?= $partite[$_j]['team_ospiti']['squadra'] ?></span>
+                    │
+                    <span><?= $partite[$_j]['team_casa']['punteggio'] ?></span>
+                    -
                     <span><?= $partite[$_j]['team_ospiti']['punteggio'] ?></span>
                 </li>
             <?php
@@ -92,7 +95,7 @@
         <h1>Snack 4</h1>
         
         <h3>Numeri generati causalmente:</h3>
-        
+
         <?php
             $arr_random = [];
             while (count($arr_random) < 15) {
@@ -106,7 +109,31 @@
             }
         ?>
 
+        <!-- inizio snack 5 -->
 
+        <h1>Snack 5</h1>
+
+        <h3>Testo diviso in più paragrafi:</h3>
+
+        <?php
+            $testo_lungo = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Officia dolor sequi temporibus sint repellat tempora? Iusto ipsam totam voluptatum 
+            odit dolores ut culpa optio aut, consectetur fugit similique! Provident, fugiat! 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloribus molestias, 
+            maiores dolor fugiat excepturi est temporibus blanditiis amet assumenda facere! Quas, 
+            pariatur placeat voluptas iste autem molestiae nulla voluptatem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Officia dolor sequi temporibus sint repellat tempora? Iusto ipsam totam voluptatum 
+            odit dolores ut culpa optio aut, consectetur fugit similique! Provident, fugiat! 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus doloribus molestias, 
+            maiores dolor fugiat excepturi est temporibus blanditiis amet assumenda facere! Quas, 
+            pariatur placeat voluptas iste autem mo";
+            
+            $nuovo_paragrafo = (explode(".", $testo_lungo));
+            
+            foreach ($nuovo_paragrafo as $testo_corto) {
+                echo '<li>' . '-' . $testo_corto . '</li>';
+            };
+        ?>
 
     </div>
 </body>
