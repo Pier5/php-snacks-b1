@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1400px;
+    margin: 10px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px 0;
+}
