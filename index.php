@@ -87,6 +87,27 @@
             }
         ?>
 
+        <!-- inizio snack 4 -->
+
+        <h1>Snack 4</h1>
+        
+        <h3>Numeri generati causalmente:</h3>
+        
+        <?php
+            $arr_random = [];
+            while (count($arr_random) < 15) {
+                $numeri = rand(1, 100);
+                if (!in_array($numeri, $arr_random)) {
+                    array_push($arr_random, $numeri);
+                }
+            }
+            foreach ($arr_random as $numeri) {
+                echo $numeri . ' / ';
+            }
+        ?>
+
+
+
     </div>
 </body>
 </html>
