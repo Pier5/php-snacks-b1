@@ -9,7 +9,10 @@
 </head>
 <body>
     <div class="container">
+
+    <!-- inizio snack 1  -->
     <h1>Snack 1</h1>
+    <h3>Risultati della giornata 2 di campionato:</h3>
         <?php
             $partite = [
                 [
@@ -56,6 +59,34 @@
             <?php
             } ?>
         </ul>
+        
+        <!-- inizio snack 2 -->
+
+        <h1>Snack 2</h1>
+        
+        <form action="" method="GET">
+            <label for="search">Nome:</label>
+            <input type="text" name="nome" id="nome">
+            <label for="search">Mail:</label>
+            <input type="text" name="mail" id="mail">
+            <label for="search">Età:</label>
+            <input type="text" name="età" id="età">
+            <button>Invia dati</button>
+        </form>
+        
+        <?php
+            if(isset($_GET['nome']) && isset($_GET['mail']) && isset($_GET['età'])) {
+                $nome = $_GET['nome'];
+                $mail = $_GET['mail'];
+                $età = $_GET['età'];
+                if((strlen($nome) > 3) && (filter_var($mail, FILTER_VALIDATE_EMAIL)) && (is_numeric($età))) {
+                    echo 'Accesso riuscito';
+                } else {
+                    echo 'Accesso negato';
+                }
+            }
+        ?>
+
     </div>
 </body>
 </html>
